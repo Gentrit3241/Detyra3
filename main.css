@@ -1,0 +1,203 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(#ffffff, #bee5bf);
+    margin: 0px;
+    user-select: none;
+}
+
+header {
+    font-weight: bolder;
+    width: 600px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.maindiv {
+    background-color: #373f51;
+    width: 600px;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+input {
+    text-indent: 5ch;
+    color: rgb(192, 191, 191);
+    padding: 20px;
+    background-color: #373f51;
+    border: 0px solid #373f51;
+    font-size: 1.5em;
+    font-weight: bolder;
+    width: 600px;
+    border-radius: 10px;
+}
+input:focus {
+    border: 0px red solid;
+}
+input:active {
+    border: 0px red solid;
+}
+.tickDiv {
+    display: inline-block;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border : 1px white solid;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.tickDiv:hover {
+    border : 2px white solid;
+    cursor: pointer;
+}
+.ticker::after {
+    content: "✔";
+    font-size: 1em;
+}
+.ticker {
+    text-align: center;
+    color: white;
+    border: 1px white solid;
+}
+
+/* SECOND DIV  */
+
+.secDiv {
+    background-color: #373f51;
+    color: rgb(192, 191, 191);
+    width: 590px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.todoItems {
+    position: relative;
+ /*    display: flex;
+    flex-direction: column-reverse; */
+    width: 590px;
+    height: auto;
+    background-color:  #373f51;
+    /* border-radius: 10px; */
+    max-height: 600px;
+    overflow: auto; 
+    overflow-x: hidden;
+
+}
+.todoItems::-webkit-scrollbar {
+    width: 7px;
+    /* height: 10px; */
+    scroll-behavior: auto;
+  }
+  
+/*   .todoItems::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    display: none;
+  } */
+  
+  .todoItems::-webkit-scrollbar-thumb {
+    background-color: #4d5568;
+    border-radius: 5px;
+  }
+  
+  .todoItems::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(170, 169, 169);
+  }
+  
+
+.todoItems div {
+    position: relative;
+    background-color: #373f51;
+    width: 590px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px rgb(192, 191, 191) solid;
+    cursor: pointer;
+}
+.todoItems div:hover {
+    background-color: #414b61d3;
+}
+
+
+
+.todoItems div h2 {
+    margin-left: 90px;
+    padding-left: 0px;
+    color: rgb(192, 191, 191);
+    cursor: pointer;
+}
+
+
+
+.todoItems div div {
+    display: inline-block;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border : 1px white solid;
+    margin-left: 20px;
+}
+
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterDiv h4:hover, .clearCompleted:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.filterDiv {
+    display: flex;
+}
+.filterDiv h4 {
+    padding: 0px 10px;
+}
+.itemsLeft {
+    padding-left: 10px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+.clearCompleted {
+    padding-right: 10px;
+}
+
+.all {
+    text-decoration: underline;
+}
+/* .todoItems div:nth-child(1) {
+    display: none;
+} */
+
+
+
+.itemText {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+em {
+    font-style: normal;
+}
+
+.clearAll {
+    cursor: pointer;
+}
+.clearAll:hover {
+    text-decoration: underline;
+}
